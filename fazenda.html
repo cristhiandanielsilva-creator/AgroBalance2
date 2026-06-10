@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazenda Esperança - AgroBalance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topoJogo">
+        <h1>🌱 Fazenda Esperança</h1>
+        <p>Explore cada área da propriedade e descubra como tornar a produção agrícola mais sustentável.</p>
+    </header>
+
+    <section class="painelSuperior">
+        <div class="cardPainel">
+            <h3>🏆 Pontuação</h3>
+            <div id="pontos">0</div>
+        </div>
+        <div class="cardPainel">
+            <h3>📊 Progresso</h3>
+            <div class="barraContainer">
+                <div id="barraProgresso"></div>
+            </div>
+            <p id="progressoTexto">0 de 4 desafios concluídos</p>
+        </div>
+    </section>
+
+    <main class="areaJogo">
+        <div class="fazenda">
+            <img src="img/fazenda.png" alt="Mapa da Fazenda" class="imagemFazenda">
+            <img src="img/solar.png" alt="Energia Solar" class="icone solar" onclick="abrirElemento('solar')">
+            <img src="img/agua.png" alt="Conservação da Água" class="icone agua" onclick="abrirElemento('agua')">
+            <img src="img/arvore.png" alt="Preservação Ambiental" class="icone arvore" onclick="abrirElemento('arvore')">
+            <img src="img/broto.png" alt="Solo Saudável" class="icone broto" onclick="abrirElemento('broto')">
+        </div>
+    </main>
+
+    <section class="legenda">
+        <h2>🗺️ Áreas da Fazenda</h2>
+        <div class="cardsLegenda">
+            <div class="itemLegenda">☀ <h3>Energia Renovável</h3><p>Conheça fontes de energia limpa e sustentável.</p></div>
+            <div class="itemLegenda">💧 <h3>Conservação da Água</h3><p>Aprenda técnicas para evitar desperdícios.</p></div>
+            <div class="itemLegenda">🌳 <h3>Preservação Ambiental</h3><p>Descubra a importância da biodiversidade.</p></div>
+            <div class="itemLegenda">🌱 <h3>Solo Saudável</h3><p>Conheça práticas agrícolas sustentáveis.</p></div>
+        </div>
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modalConteudo">
+            <span class="fechar" onclick="fecharModal()">✖</span>
+            <h2 id="tituloModal"></h2>
+            <div id="textoModal"></div>
+            <hr>
+            <h3 id="perguntaModal"></h3>
+            <div id="respostasModal"></div>
+        </div>
+    </div>
+
+    <div id="feedback" class="feedback">
+        <div class="feedbackBox">
+            <h2 id="tituloFeedback"></h2>
+            <div id="textoFeedback"></div>
+            <button onclick="fecharFeedback()">Continuar</button>
+        </div>
+    </div>
+
+    <section id="resultadoFinal" class="resultadoFinal" style="display:none;">
+        <h1>🏆 Resultado da Sua Jornada</h1>
+        <div id="perfilFinal"></div>
+        <h2>🎖️ Conhecimentos Adquiridos</h2>
+        <div id="conquistas"></div>
+        <div class="acoesFinais">
+            <button onclick="reiniciarProjeto()" class="btnPrincipal">🔄 Jogar Novamente</button>
+            <a href="index.html" class="btnSecundario">🏠 Página Inicial</a>
+        </div>
+    </section>
+
+    <section class="dica">
+        <h2>💡 Dica do Agrônomo</h2>
+        <p>Leia atentamente as explicações apresentadas. Mesmo quando errar uma resposta, você receberá orientações para continuar aprendendo. O objetivo do AgroBalance não é apenas acertar, mas compreender como a sustentabilidade contribui para o futuro do campo.</p>
+    </section>
+
+    <footer>
+        <p>🌱 AgroBalance • Programa Agrinho 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
